@@ -1,8 +1,10 @@
-import React from 'react'
+import Sidebar from '../Sidebar/Sidebar'
 
-const App = () => {
+const App = (): JSX.Element => {
     return (
-        <div>App</div>
+        <>
+            <Sidebar />
+        </>
     )
 }
 

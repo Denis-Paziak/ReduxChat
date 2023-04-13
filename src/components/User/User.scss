@@ -1,0 +1,27 @@
+@import '../../variables';
+
+.user {
+    display: flex;
+    align-items: center;
+    width: 100%;
+    padding: 10px;
+    transition: 0.6s;
+    cursor: pointer;
+
+    .text {
+        margin-left: 10px;
+
+        p {
+            opacity: 0.5;
+        }
+    }
+
+    .avatar {
+        background: #fff;
+    }
+
+
+    &:hover {
+        background: $lightBlack;
+    }
+}
