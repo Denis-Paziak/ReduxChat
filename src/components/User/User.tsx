@@ -3,7 +3,8 @@ import "./User.scss"
 
 interface iProps {
     user: iUser,
-    setSelectedUser: React.Dispatch<React.SetStateAction<number>>
+    setSelectedUser: React.Dispatch<React.SetStateAction<number>>,
+    selectedUser: number
 }
 
 interface iUser {
@@ -13,10 +14,14 @@ interface iUser {
 }
 
 
-const User = ({ user, setSelectedUser }: iProps): JSX.Element => {
+const User = ({ user, setSelectedUser, selectedUser }: iProps): JSX.Element => {
+    let style = "user ";
 
+    if (selectedUser === user.id) {
+        style += "active";
+    }
     return (
-        <div className="user" onClick={() => setSelectedUser(user.id)}>
+        <div className={style} onClick={() => setSelectedUser(user.id)}>
             <Avatar className="avatar" alt="Remy Sharp" src={user.image} />
             <div className="text">
                 <h2>{user.name}</h2>

@@ -7,52 +7,23 @@
     justify-content: space-between;
     width: 80%;
     height: 100vh;
+    box-sizing: border-box;
 }
-
 
 .container {
     display: flex;
     flex-direction: column;
     height: 100%;
-    padding: 40px;
+    padding: 100px 20px;
+    overflow-y: scroll;
 }
-
-.message {
-    display: flex;
-    align-items: flex-end;
-    margin-bottom: 20px;
-
-    .avatar {
-        background: #fff;
-        width: 30px;
-        height: 30px;
-        transform: translateY(50%);
-    }
-
-    .text {
-        width: fit-content;
-        background: $lightBlack;
-        border-radius: 10px 10px 10px 0px;
-        padding: 10px;
-        margin-left: 10px;
-    }
-}
-
-.userMessage {
-    margin-left: auto;
-
-    .text {
-        background: $main;
-        border-radius: 10px 10px 0px 10px;
-    }
-}
-
 
 form {
     position: absolute;
-    bottom: 0;
+    bottom: 1px;
     left: 0;
     width: 100%;
+    background: $lightBlack;
 
     .input {
         width: 100%;

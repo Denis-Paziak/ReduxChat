@@ -19,11 +19,6 @@ const users = [
         name: "Logan",
         image: "https://api.dicebear.com/6.x/pixel-art/svg?seed=2"
     },
-    {
-        id: 3,
-        name: "Bryan",
-        image: "https://api.dicebear.com/6.x/pixel-art/svg?seed=3"
-    }
 ]
 
 const App = (): JSX.Element => {

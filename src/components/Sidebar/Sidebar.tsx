@@ -20,9 +20,11 @@ const Sidebar = ({ users, setSelectedUser, selectedUser }: iProps): JSX.Element 
             <h2 className='title'>Select a user</h2>
             {
                 users.map((el) => {
-                    if (el.id !== selectedUser) {
-                        return <User key={el.id} user={el} setSelectedUser={setSelectedUser} />
-                    }
+                    return <User
+                        key={el.id}
+                        user={el}
+                        setSelectedUser={setSelectedUser}
+                        selectedUser={selectedUser} />
                 })
             }
             <Button className='registerUser' variant="contained">Register new user</Button>
