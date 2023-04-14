@@ -1,0 +1,56 @@
+@import "../../variables";
+
+.chat {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    width: 80%;
+    height: 100vh;
+}
+
+
+.container {
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    padding: 40px;
+}
+
+.message {
+    display: flex;
+    align-items: flex-end;
+    margin-bottom: 20px;
+
+    .avatar {
+        width: 30px;
+        height: 30px;
+        transform: translateY(50%);
+    }
+
+    .text {
+        width: fit-content;
+        background: $lightBlack;
+        border-radius: 10px 10px 10px 0px;
+        padding: 10px;
+        margin-left: 10px;
+    }
+}
+
+.userMessage {
+    .text {
+        background: $main;
+    }
+}
+
+
+form {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+
+    .input {
+        width: 100%;
+    }
+}

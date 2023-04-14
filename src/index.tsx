@@ -10,6 +10,7 @@ const root = ReactDOM.createRoot(
 
 const theme = createTheme({
   palette: {
+    mode: 'dark',
     primary: {
       main: '#6d8afd',
     },
