@@ -23,6 +23,7 @@
     margin-bottom: 20px;
 
     .avatar {
+        background: #fff;
         width: 30px;
         height: 30px;
         transform: translateY(50%);
@@ -38,8 +39,11 @@
 }
 
 .userMessage {
+    margin-left: auto;
+
     .text {
         background: $main;
+        border-radius: 10px 10px 0px 10px;
     }
 }
 

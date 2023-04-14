@@ -4,28 +4,52 @@ import "./Chat.scss"
 
 const data = [
     {
-        message: "hi",
-        from: "denis"
+        userId: 0,
+        message: "Hi",
+        image: "https://api.dicebear.com/6.x/pixel-art/svg?seed=0"
     },
     {
-        message: "i am a denis",
-        from: "denis"
-    }
+        userId: 1,
+        message: "Hi",
+        image: "https://api.dicebear.com/6.x/pixel-art/svg?seed=1"
+    },
+    {
+        userId: 0,
+        message: "My name is James",
+        image: "https://api.dicebear.com/6.x/pixel-art/svg?seed=0"
+    },
 ];
 
+interface iUser {
+    id: number,
+    name: string,
+    image: string
+}
 
-const Chat = (): JSX.Element => {
+interface iProps {
+    selectUser: iUser
+}
+
+const Chat = ({ selectUser }: iProps): JSX.Element => {
     return (
         <div className="chat">
-            <Header />
+            <Header selectUser={selectUser} />
             <div className="container">
                 {data.map((el) => {
-                    return (
-                        <div className="message">
-                            <Avatar className="avatar" alt="Remy Sharp" />
-                            <p className="text">{el.message}</p>
-                        </div>
-                    )
+                    if (el.userId === selectUser.id) {
+                        return (
+                            <div className="message userMessage">
+                                <p className="text">{el.message}</p>
+                            </div>
+                        )
+                    } else {
+                        return (
+                            <div className="message">
+                                <Avatar className="avatar" src={el.image} alt="Remy Sharp" />
+                                <p className="text">{el.message}</p>
+                            </div>
+                        )
+                    }
                 })}
             </div>
             <form action="">

@@ -1,11 +1,21 @@
 import { Avatar } from "@mui/material"
 import "./Header.scss"
 
-const Header = (): JSX.Element => {
+interface iUser {
+    id: number,
+    name: string,
+    image: string
+}
+
+interface iProps {
+    selectUser: iUser
+}
+
+const Header = ({ selectUser }: iProps): JSX.Element => {
     return (
         <header className="header">
-            <Avatar className="avatar" alt="Remy Sharp" />
-            <h2 className="name">User</h2>
+            <Avatar className="avatar" src={selectUser.image} alt="Remy Sharp" />
+            <h2 className="name">{selectUser.name}</h2>
         </header>
     )
 }
