@@ -17,7 +17,13 @@ const MessageForm = ({ sendMess }: iProps) => {
     const send = (e: any) => {
         e.preventDefault();
         e.target.reset();
-        sendMess(text);
+
+        if (text.length > 0) {
+            sendMess(text);
+            setText('');
+        } else {
+            alert("Write text")
+        }
     }
 
     return (

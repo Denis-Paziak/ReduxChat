@@ -1,15 +1,11 @@
 import { Avatar } from '@mui/material'
 import "./Message.scss"
+import iMessage from "./iMessage"
+
 
 interface iProps {
     data: iMessage,
     isUser: boolean
-}
-
-interface iMessage {
-    userId: number,
-    message: string,
-    image: string
 }
 
 const Message = ({ data, isUser }: iProps): JSX.Element => {

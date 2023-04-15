@@ -1,20 +1,16 @@
 import './Sidebar.scss';
 import User from '../User/User'
 import { Button } from "@mui/material"
-
-interface iUser {
-    id: number,
-    name: string,
-    image: string
-}
+import { useSelector } from 'react-redux'
+import iUser from '../User/iUser'
 
 interface iProps {
-    users: iUser[],
-    setSelectedUser: React.Dispatch<React.SetStateAction<number>>,
-    selectedUser: number
+    container: React.MutableRefObject<null>
 }
 
-const Sidebar = ({ users, setSelectedUser, selectedUser }: iProps): JSX.Element => {
+const Sidebar = ({ container }: iProps): JSX.Element => {
+    const users: iUser[] = useSelector((state: any) => state.users.users);
+
     return (
         <div className='sidebar'>
             <h2 className='title'>Select a user</h2>
@@ -23,8 +19,8 @@ const Sidebar = ({ users, setSelectedUser, selectedUser }: iProps): JSX.Element 
                     return <User
                         key={el.id}
                         user={el}
-                        setSelectedUser={setSelectedUser}
-                        selectedUser={selectedUser} />
+                        container={container}
+                    />
                 })
             }
             <Button className='registerUser' variant="contained">Register new user</Button>
