@@ -3,17 +3,20 @@ import "./User.scss"
 import { useDispatch, useSelector } from "react-redux"
 import { setSelectedUser } from "../../reducers/userReducer"
 import iUser from './iUser'
+import {AnyAction} from "@reduxjs/toolkit";
+import {Dispatch} from "react";
 
 interface iProps {
     user: iUser,
-    container: React.MutableRefObject<null>
+    container: React.MutableRefObject<null>,
 }
 
 const User = ({ user, container }: iProps): JSX.Element => {
-    const selectedUser = useSelector((state: any) => state.chat.selectedUser);
-    const dispatch = useDispatch();
+    const selectedUser = useSelector((state: any) => state.users.selectedUser);
+    const dispatch: Dispatch<AnyAction>  = useDispatch();
 
-    let style = "user ";
+    let style: string = "user ";
+
 
     if (selectedUser === user.id) {
         style += "active";
@@ -31,8 +34,7 @@ const User = ({ user, container }: iProps): JSX.Element => {
         <div className={style} onClick={handler}>
             <Avatar className="avatar" alt="Remy Sharp" src={user.image} />
             <div className="text">
-                <h2>{user.name}</h2>
-                <p>Last message</p>
+                <p>{user.name}</p>
             </div>
         </div>
     )

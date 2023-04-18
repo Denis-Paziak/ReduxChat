@@ -22,7 +22,7 @@ const MessageForm = ({ sendMess }: iProps) => {
             sendMess(text);
             setText('');
         } else {
-            alert("Write text")
+            alert("Write a message")
         }
     }
 

@@ -7,20 +7,20 @@ export const chatSlice = createSlice({
             {
                 id: 0,
                 userId: 1,
-                message: "Lorem Ipsum is simply dummy text of the printing and typesetting industry.",
+                message: "Hi, I'm new to this chat. How are you guys doing?",
                 image: "https://api.dicebear.com/6.x/pixel-art/svg?seed=1"
             },
             {
                 id: 1,
                 userId: 0,
-                message: "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.",
+                message: "Hi there! Welcome to our chat! Everything's good, how about yourself?",
                 image: "https://api.dicebear.com/6.x/pixel-art/svg?seed=0"
             },
             {
                 id: 2,
-                userId: 1,
-                message: "Contrary to popular belief, Lorem Ipsum is not simply random text. It has roots in a piece of classical Latin literature from 45 BC, making it over 2000 years old.",
-                image: "https://api.dicebear.com/6.x/pixel-art/svg?seed=1"
+                userId: 2,
+                message: "Hello, joining in on the greetings! How are you doing, Alan?",
+                image: "https://api.dicebear.com/6.x/pixel-art/svg?seed=2"
             },
         ],
     },

@@ -15,7 +15,7 @@ const Sidebar = ({ container }: iProps): JSX.Element => {
         <div className='sidebar'>
             <h2 className='title'>Select a user</h2>
             {
-                users.map((el) => {
+                users.map((el: iUser) => {
                     return <User
                         key={el.id}
                         user={el}
